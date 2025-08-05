@@ -15,6 +15,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // スムーススクロール
     initSmoothScroll();
+    
+    // ヘッドライン位置調整
+    initHeadlinePosition();
 });
 
 // ハンバーガーメニュー機能
@@ -296,6 +299,31 @@ function initPerformanceOptimizations() {
     deferredScripts.forEach(script => {
         script.src = script.dataset.src;
     });
+}
+
+// ヘッドライン位置調整
+function initHeadlinePosition() {
+    const header = document.querySelector('.fixed-header');
+    const headlineTicker = document.querySelector('.headline-ticker');
+    
+    if (header && headlineTicker) {
+        function adjustHeadlinePosition() {
+            const headerHeight = header.offsetHeight;
+            const extraMargin = 10; // 追加の余白
+            headlineTicker.style.marginTop = (headerHeight + extraMargin) + 'px';
+        }
+        
+        // 初期調整
+        adjustHeadlinePosition();
+        
+        // ウィンドウリサイズ時に再調整
+        window.addEventListener('resize', adjustHeadlinePosition);
+        
+        // フォント読み込み完了後に再調整（line-heightの影響を考慮）
+        if (document.fonts) {
+            document.fonts.ready.then(adjustHeadlinePosition);
+        }
+    }
 }
 
 // 初期化関数の実行
