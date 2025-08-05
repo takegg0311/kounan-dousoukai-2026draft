@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - 甲南高校同窓会</title>
+    <meta name="description" content="甲南高校同窓会のお問い合わせページです。問い合わせフォーム、寄附受付、二甲記念館へのアクセス情報をご案内します。">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* フォーム専用スタイル */
+        .contact-form {
+            background-color: var(--base-light-gray);
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: var(--text-dark);
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: inherit;
+        }
+        
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 5px rgba(102, 0, 153, 0.2);
+        }
+        
+        .form-group.error input,
+        .form-group.error textarea,
+        .form-group.error select {
+            border-color: #ff0000;
+        }
+        
+        .submit-button {
+            background-color: var(--primary-color);
+            color: var(--base-white);
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-button:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .contact-info {
+            background-color: var(--base-light-gray);
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .contact-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .contact-info p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .contact-info strong {
+            color: var(--text-dark);
+        }
+    </style>
+</head>
+<body>
+    <!-- 固定ヘッダー -->
+    <header class="fixed-header">
+        <div class="header-top">
+            <span>甲南高校同窓会 公式Webサイト</span>
+        </div>
+        <div class="header-main">
+            <a href="index.html" class="logo">甲南高校同窓会</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="index.html#news">新着情報</a></li>
+                    <li><a href="activities.html">同窓会活動紹介</a></li>
+                    <li><a href="organizations.html">組織紹介</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ヘッドライン -->
+    <div class="headline-ticker">
+        <div class="ticker-content">
+            【重要】2024年度関東甲南同窓会総会開催のお知らせ | 甲南塾 第23回講演会実施報告 | 120周年記念事業 寄附のお願い | 甲南GUIDE 最新号発行のお知らせ
+        </div>
+    </div>
+
+    <!-- ヒーローセクション -->
+    <section class="hero-section">
+        <div class="hero-slider">
+            <div class="hero-slide active" style="background-image: url('https://via.placeholder.com/1200x300/660099/FFFFFF?text=Contact+Us')">
+                <div class="hero-content">
+                    <h1 class="hero-title">Contact Us</h1>
+                    <p class="hero-subtitle">お気軽にお問い合わせください</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <div class="main-area">
+                <h2 class="page-title">Contact Us</h2>
+                
+                <!-- 3つのリンクバナー -->
+                <div class="grid-3" style="margin-bottom: 40px;">
+                    <a href="#contact-form" class="banner" style="background-color: var(--primary-color); height: 150px;">
+                        <div>
+                            <strong>お問い合わせフォーム</strong><br>
+                            お気軽にご連絡ください
+                        </div>
+                    </a>
+                    <a href="#donation" class="banner" style="background-color: var(--accent-color); color: var(--text-dark); height: 150px;">
+                        <div>
+                            <strong>寄附受付</strong><br>
+                            120周年記念事業へのご協力
+                        </div>
+                    </a>
+                    <a href="#memorial-hall" class="banner" style="background-color: var(--accent-dark); height: 150px;">
+                        <div>
+                            <strong>二甲記念館</strong><br>
+                            アクセス・利用案内
+                        </div>
+                    </a>
+                </div>
+
+                <!-- お問い合わせフォーム -->
+                <section id="contact-form" class="contact-form">
+                    <h3 style="color: var(--primary-color); margin-bottom: 20px;">お問い合わせフォーム</h3>
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">お名前 <span style="color: #ff0000;">*</span></label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">メールアドレス <span style="color: #ff0000;">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">電話番号</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="graduation_year">卒業年</label>
+                            <select id="graduation_year" name="graduation_year">
+                                <option value="">選択してください</option>
+                                <option value="2024">2024年</option>
+                                <option value="2023">2023年</option>
+                                <option value="2022">2022年</option>
+                                <option value="2021">2021年</option>
+                                <option value="2020">2020年</option>
+                                <option value="2019">2019年</option>
+                                <option value="2018">2018年</option>
+                                <option value="2017">2017年</option>
+                                <option value="2016">2016年</option>
+                                <option value="2015">2015年</option>
+                                <option value="before_2015">2015年以前</option>
+                                <option value="not_graduate">卒業生ではありません</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="category">お問い合わせ種別 <span style="color: #ff0000;">*</span></label>
+                            <select id="category" name="category" required>
+                                <option value="">選択してください</option>
+                                <option value="general">一般のお問い合わせ</option>
+                                <option value="membership">会員に関するお問い合わせ</option>
+                                <option value="event">イベントに関するお問い合わせ</option>
+                                <option value="donation">寄附に関するお問い合わせ</option>
+                                <option value="publication">出版物に関するお問い合わせ</option>
+                                <option value="other">その他</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">件名 <span style="color: #ff0000;">*</span></label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">お問い合わせ内容 <span style="color: #ff0000;">*</span></label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-button">送信する</button>
+                    </form>
+                </section>
+
+                <!-- 寄附受付 -->
+                <section id="donation" class="contact-info">
+                    <h3>寄附受付</h3>
+                    <p><strong>120周年記念事業へのご協力をお願いいたします</strong></p>
+                    <p>甲南高校創立120周年を記念して、以下の事業を計画しています：</p>
+                    <ul style="margin-left: 20px; margin-bottom: 20px;">
+                        <li>記念式典の開催</li>
+                        <li>記念誌の発行</li>
+                        <li>奨学金基金の拡充</li>
+                        <li>学校施設の整備</li>
+                    </ul>
+                    <p><strong>寄附方法：</strong></p>
+                    <p>銀行振込：○○銀行 ○○支店 普通 ○○○○○○○○</p>
+                    <p>口座名義：甲南高校同窓会</p>
+                    <p>※振込手数料はご負担ください</p>
+                    <p>※寄附に関する詳細は、お問い合わせフォームまたは電話でご連絡ください。</p>
+                </section>
+
+                <!-- 二甲記念館 -->
+                <section id="memorial-hall" class="contact-info">
+                    <h3>二甲記念館</h3>
+                    <p><strong>所在地：</strong>鹿児島県鹿児島市下荒田4丁目1-1</p>
+                    <p><strong>アクセス：</strong></p>
+                    <ul style="margin-left: 20px; margin-bottom: 20px;">
+                        <li>JR鹿児島中央駅から徒歩15分</li>
+                        <li>市電「甲南高校前」駅から徒歩3分</li>
+                        <li>バス「甲南高校前」停留所から徒歩2分</li>
+                    </ul>
+                    <p><strong>利用時間：</strong>平日 9:00～17:00（土日祝日は要予約）</p>
+                    <p><strong>利用料金：</strong>無料（同窓生・関係者のみ）</p>
+                    <p><strong>設備：</strong>会議室、展示室、資料室</p>
+                    <p>※利用を希望される場合は、事前にお問い合わせください。</p>
+                </section>
+            </div>
+
+            <aside class="sidebar">
+                <!-- 120周年カウントダウン -->
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">120周年記念まで</h3>
+                    <div class="countdown" id="countdown">
+                        <span class="countdown-number">--</span>
+                        <span class="countdown-label">日</span>
+                    </div>
+                    <p style="text-align: center; font-size: 14px; color: var(--text-light);">
+                        2026年9月22日
+                    </p>
+                </div>
+
+                <!-- 寄附進捗状況 -->
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">寄附進捗状況</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <div class="progress-text">目標: 1,000万円 / 現在: 650万円 (65%)</div>
+                </div>
+
+                <!-- 甲南GUIDEリンクバナー -->
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">甲南GUIDE</h3>
+                    <a href="#" class="banner">
+                        <div>
+                            <strong>甲南GUIDE</strong><br>
+                            最新号はこちら
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 緊急連絡先 -->
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">緊急連絡先</h3>
+                    <p style="font-size: 14px; color: var(--text-light); margin-bottom: 15px;">
+                        緊急時は以下の番号までご連絡ください。
+                    </p>
+                    <p style="font-size: 16px; font-weight: bold; color: var(--primary-color);">
+                        TEL: 099-XXX-XXXX
+                    </p>
+                    <p style="font-size: 14px; color: var(--text-light);">
+                        （平日 9:00～17:00）
+                    </p>
+                </div>
+
+                <!-- よくある質問 -->
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">よくある質問</h3>
+                    <div style="margin-bottom: 15px;">
+                        <p style="font-size: 14px; font-weight: bold; color: var(--text-dark);">
+                            Q. 同窓会への入会方法は？
+                        </p>
+                        <p style="font-size: 12px; color: var(--text-light);">
+                            A. お問い合わせフォームまたは電話でご連絡ください。
+                        </p>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <p style="font-size: 14px; font-weight: bold; color: var(--text-dark);">
+                            Q. 支部・分会への参加方法は？
+                        </p>
+                        <p style="font-size: 12px; color: var(--text-light);">
+                            A. お住まいの地域の支部・分会に直接お問い合わせください。
+                        </p>
+                    </div>
+                    <div>
+                        <p style="font-size: 14px; font-weight: bold; color: var(--text-dark);">
+                            Q. 甲南GUIDEの配布について
+                        </p>
+                        <p style="font-size: 12px; color: var(--text-light);">
+                            A. 会員の方には年2回郵送でお届けしています。
+                        </p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- フッター -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p><strong>甲南高校同窓会</strong></p>
+                <p>〒890-0065 鹿児島県鹿児島市下荒田4丁目1-1</p>
+                <p>TEL: 099-XXX-XXXX | FAX: 099-XXX-XXXX</p>
+                <p>Email: info@kounan-dousoukai.jp</p>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2024 甲南高校同窓会. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
