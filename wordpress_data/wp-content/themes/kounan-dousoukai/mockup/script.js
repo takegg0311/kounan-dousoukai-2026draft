@@ -96,10 +96,6 @@ function initCountdown() {
         countdownElement.innerHTML = `
             <span class="countdown-number">${days}</span>
             <span class="countdown-label">日</span>
-            <span class="countdown-number">${hours.toString().padStart(2, '0')}</span>
-            <span class="countdown-label">時間</span>
-            <span class="countdown-number">${minutes.toString().padStart(2, '0')}</span>
-            <span class="countdown-label">分</span>
         `;
     }
     
