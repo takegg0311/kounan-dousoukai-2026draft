@@ -275,6 +275,18 @@ body {
     gap: 10px;
 }
 
+.news-item:not(:first-child) .news-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.news-item:not(:first-child) .news-title {
+    margin: 0;
+    font-size: 16px;
+}
+
 .news-thumbnail {
     width: 120px;
     height: 80px;
