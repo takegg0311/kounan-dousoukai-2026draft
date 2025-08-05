@@ -128,18 +128,59 @@ body {
     padding: 10px 0;
     margin-top: 0; /* JavaScriptで動的に設定 */
     overflow: hidden;
-    white-space: nowrap;
+    position: relative;
 }
 
-.ticker-content {
-    display: inline-block;
-    animation: ticker 30s linear infinite;
-    padding-left: 100%;
+.ticker-container {
+    position: relative;
+    height: 24px;
+    overflow: hidden;
 }
 
-@keyframes ticker {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+.ticker-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.ticker-item.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.ticker-item.sliding-out {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+}
+
+.ticker-date {
+    color: var(--text-light);
+    font-size: 12px;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.ticker-label {
+    background-color: var(--primary-color);
+    color: var(--base-white);
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.ticker-text {
+    font-size: 14px;
+    font-weight: 500;
 }
 
 /* ヒーローセクション */

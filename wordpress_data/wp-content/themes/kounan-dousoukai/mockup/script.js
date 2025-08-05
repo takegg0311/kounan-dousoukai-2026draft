@@ -163,16 +163,37 @@ function initSmoothScroll() {
 
 // ヘッドライン流しテキスト機能
 function initHeadlineTicker() {
-    const tickerContent = document.querySelector('.ticker-content');
-    if (!tickerContent) return;
+    const tickerItems = document.querySelectorAll('.ticker-item');
+    if (tickerItems.length === 0) return;
     
-    // テキストが短い場合はアニメーションを無効化
-    const tickerWidth = tickerContent.scrollWidth;
-    const containerWidth = tickerContent.parentElement.offsetWidth;
+    let currentIndex = 0;
+    const slideInterval = 4000; // 4秒間隔
     
-    if (tickerWidth <= containerWidth) {
-        tickerContent.style.animation = 'none';
+    function showNextItem() {
+        // 現在のアイテムをスライドアウト
+        tickerItems[currentIndex].classList.add('sliding-out');
+        
+        // 次のアイテムのインデックスを計算
+        const nextIndex = (currentIndex + 1) % tickerItems.length;
+        
+        // スライドアウトが完了してから次のアイテムをアクティブにする
+        setTimeout(() => {
+            // 現在のアイテムを非アクティブにする
+            tickerItems[currentIndex].classList.remove('active', 'sliding-out');
+            
+            // 次のアイテムをアクティブにする
+            tickerItems[nextIndex].classList.add('active');
+            
+            // インデックスを更新
+            currentIndex = nextIndex;
+        }, 500); // アニメーション完了後に切り替え
     }
+    
+    // 最初のアイテムを表示
+    tickerItems[0].classList.add('active');
+    
+    // 自動スライド
+    setInterval(showNextItem, slideInterval);
 }
 
 // 画像の遅延読み込み
