@@ -76,8 +76,8 @@ function initCountdown() {
     const countdownElement = document.getElementById('countdown');
     if (!countdownElement) return;
     
-    // 120周年記念日（2026年9月22日）
-    const targetDate = new Date('2026-09-22T00:00:00');
+    // 120周年記念式典日（2026年11月2日）
+    const targetDate = new Date('2026-11-02T00:00:00');
     
     function updateCountdown() {
         const now = new Date();
@@ -114,8 +114,8 @@ function initProgressBar() {
     if (!progressFill || !progressText) return;
     
     // 寄附目標金額と現在の寄附金額（例）
-    const targetAmount = 10000000; // 1000万円
-    const currentAmount = 6500000; // 650万円（例）
+    const targetAmount = 100000000; // 10000万円
+    const currentAmount = 18000000; // 1800万円
     const progressPercentage = (currentAmount / targetAmount) * 100;
     
     // 進捗バーをアニメーション表示
