@@ -86,7 +86,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>甲南高校同窓会</title>
+    <title>鹿児島県立甲南高等学校 同窓会</title>
 </head>
 <body>
     <!-- 固定ヘッダー -->
