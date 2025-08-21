@@ -814,30 +814,77 @@ img.logo {
     padding-bottom: 10px;
 }
 
+.timeline-container {
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline-axis {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: var(--primary-color);
+    transform: translateX(-50%);
+}
+
 .timeline {
     list-style: none;
     position: relative;
+    margin: 0;
+    padding: 0;
 }
 
-.timeline > li {
-    margin-bottom: 60px;
+.timeline-year-group {
+    margin-bottom: 40px;
     position: relative;
 }
 
-.timeline-date {
+.year-marker {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    color: var(--base-white);
+    padding: 8px 16px;
+    border-radius: 20px;
     font-weight: bold;
-    color: var(--primary-color);
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 16px;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-item {
+    margin: 20px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .timeline-content {
     background-color: var(--base-white);
     padding: 20px;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-left: 3px solid var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    width: 80%;
+    max-width: 600px;
     position: relative;
+    text-align: center;
+}
+
+.timeline-date {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--text-dark);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .timeline-content h4 {
@@ -850,41 +897,25 @@ img.logo {
     color: var(--text-light);
     line-height: 1.6;
     margin: 0;
+    text-align: left;
 }
 
-/* デスクトップ用タイムラインレイアウト */
-@media (min-width: 640px) {
-    .timeline > li {
-        overflow: hidden;
-        margin: 0 0 60px 0;
-        position: relative;
+/* モバイル用レイアウト */
+@media (max-width: 639px) {
+    .timeline-axis {
+        left: 20px;
+        transform: none;
     }
     
-    .timeline-date {
-        width: 110px;
-        float: left;
-        margin-top: 20px;
-        margin-bottom: 0;
+    .year-marker {
+        left: 20px;
+        transform: none;
     }
     
     .timeline-content {
-        width: calc(100% - 130px);
-        float: left;
-        border-left: 3px solid var(--primary-color);
-        padding-left: 30px;
-        margin-left: 20px;
-    }
-    
-    .timeline-content:before {
-        content: "";
-        width: 12px;
-        height: 12px;
-        background: var(--primary-color);
-        position: absolute;
-        left: -7px;
-        top: 24px;
-        border-radius: 100%;
-        border: 3px solid var(--base-white);
-        box-shadow: 0 0 0 2px var(--primary-color);
+        width: calc(100% - 60px);
+        margin-left: 60px;
+        margin-top: 30px;
+        text-align: left;
     }
 } 
