@@ -557,17 +557,26 @@ img.logo {
 /* カウントダウン */
 .countdown {
     text-align: center;
-    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 .countdown-number {
-    font-size: 32px;
+    font-size: 44px;
     font-weight: bold;
     color: var(--primary-color);
-    display: block;
+    display: inline-block;
 }
 
-.countdown-label {
+.countdown-prefix {
+    font-size: 14px;
+    color: var(--text-light);
+    display: inline-block;
+}
+
+.countdown-suffix {
     font-size: 14px;
     color: var(--text-light);
 }

@@ -84,7 +84,7 @@ function initCountdown() {
         const timeDifference = targetDate - now;
         
         if (timeDifference <= 0) {
-            countdownElement.innerHTML = '<span class="countdown-number">0</span><span class="countdown-label">日</span>';
+            countdownElement.innerHTML = '<span class="countdown-prefix">あと</span><span class="countdown-number">0</span><span class="countdown-suffix">日</span>';
             return;
         }
         
@@ -94,8 +94,9 @@ function initCountdown() {
         const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
         
         countdownElement.innerHTML = `
+            <span class="countdown-prefix">あと</span>
             <span class="countdown-number">${days}</span>
-            <span class="countdown-label">日</span>
+            <span class="countdown-suffix">日</span>
         `;
     }
     
@@ -133,7 +134,7 @@ function initProgressBar() {
         }
         
         progressFill.style.width = currentProgress + '%';
-        progressText.textContent = `目標: ${(targetAmount / 10000).toLocaleString()}万円 / 現在: ${(currentAmount / 10000).toLocaleString()}万円 (${Math.round(currentProgress)}%)`;
+        progressText.innerHTML = `現在: ${(currentAmount / 10000).toLocaleString()}万円<br>目標: ${(targetAmount / 10000).toLocaleString()}万円<br>達成率: ${Math.round(currentProgress)}%`;
     }, stepDuration);
 }
 
