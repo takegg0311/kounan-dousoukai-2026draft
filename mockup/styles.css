@@ -388,6 +388,30 @@ img.logo {
     height: fit-content;
 }
 
+.sidebar-list {
+    list-style: disc;
+    padding: 0 20px;
+    margin: 0;
+    color: var(--text-dark);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.sidebar-list li {
+    margin-bottom: 5px;
+}
+
+.sidebar-list a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.sidebar-list a:hover {
+    color: var(--primary-color);
+}
+
 /* ページタイトル */
 .page-title {
     font-size: 32px;
