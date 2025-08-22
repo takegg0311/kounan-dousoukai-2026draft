@@ -473,6 +473,13 @@ img.logo {
 }
 
 /* グリッドレイアウト */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
 .grid-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
