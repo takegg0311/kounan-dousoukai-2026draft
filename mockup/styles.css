@@ -620,7 +620,7 @@ img.logo {
     transition: background-color 0.3s;
 }
 
-.banner:hover {
+.banner.konan-school {
     background-color: var(--primary-color);
 }
 
