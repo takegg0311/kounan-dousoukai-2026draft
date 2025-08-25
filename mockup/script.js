@@ -24,10 +24,12 @@ document.addEventListener('DOMContentLoaded', function() {
 function initHamburgerMenu() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
+    const headerSns = document.querySelector('.header-sns');
     
-    if (hamburger && navMenu) {
+    if (hamburger && navMenu && headerSns) {
         hamburger.addEventListener('click', function() {
             navMenu.classList.toggle('active');
+            headerSns.classList.toggle('active');
             hamburger.classList.toggle('active');
         });
         
@@ -36,6 +38,7 @@ function initHamburgerMenu() {
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
                 navMenu.classList.remove('active');
+                headerSns.classList.remove('active');
                 hamburger.classList.remove('active');
             });
         });
@@ -328,7 +331,8 @@ function initHeadlinePosition() {
         function adjustHeadlinePosition() {
             const headerHeight = header.offsetHeight;
             const extraMargin = 10; // 追加の余白
-            headlineTicker.style.marginTop = (headerHeight + extraMargin) + 'px';
+            const marginTop = headerHeight + extraMargin;
+            headlineTicker.style.marginTop = marginTop + 'px';
         }
         
         // 初期調整
