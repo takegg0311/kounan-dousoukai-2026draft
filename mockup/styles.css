@@ -724,6 +724,21 @@ img.emblem {
         margin-top: 160px; /* モバイルヘッダーの高さに合わせて調整 */
     }
     
+    /* ヘッダータイトルのモバイル対応 */
+    .title-text {
+        font-size: 20px;
+        white-space: normal;
+        line-height: 1.2;
+    }
+    
+    .emblem-group {
+        gap: 10px;
+    }
+    
+    img.emblem {
+        height: 45px;
+    }
+    
     .hero-slider {
         height: 400px;
     }
@@ -971,6 +986,41 @@ img.emblem {
         margin-left: 60px;
         margin-top: 30px;
         text-align: left;
+    }
+    
+    /* ヘッダータイトルのモバイル対応 */
+    .title-text {
+        font-size: 18px;
+        white-space: normal;
+        line-height: 1.2;
+    }
+    
+    .emblem-group {
+        gap: 8px;
+    }
+    
+    img.emblem {
+        height: 40px;
+    }
+}
+
+/* さらに小さい画面サイズ対応 */
+@media (max-width: 480px) {
+    .title-text {
+        font-size: 16px;
+    }
+    
+    .emblem-group {
+        gap: 6px;
+    }
+    
+    img.emblem {
+        height: 35px;
+    }
+    
+    .header-main {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 
