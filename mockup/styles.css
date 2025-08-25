@@ -593,16 +593,18 @@ img.logo {
     margin-bottom: 15px;
     transition: background-color 0.3s;
 }
-
-.banner.konan-school {
+    
+.banner.primary {
     background-color: var(--primary-color);
+    color: var(--base-white);
 }
 
-.banner.konan-guide {
-    background-color: var(--accent-dark);
+.banner.secondary {
+    background-color: var(--secondary-color);
+    color: var(--base-white);
 }
 
-.banner.kounan-ssf {
+.banner.accent {
     background-color: var(--accent-color);
     color: var(--text-dark);
 }
