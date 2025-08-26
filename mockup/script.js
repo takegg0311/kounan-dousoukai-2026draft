@@ -24,10 +24,12 @@ document.addEventListener('DOMContentLoaded', function() {
 function initHamburgerMenu() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
+    const headerSns = document.querySelector('.header-sns');
     
-    if (hamburger && navMenu) {
+    if (hamburger && navMenu && headerSns) {
         hamburger.addEventListener('click', function() {
             navMenu.classList.toggle('active');
+            headerSns.classList.toggle('active');
             hamburger.classList.toggle('active');
         });
         
@@ -36,6 +38,7 @@ function initHamburgerMenu() {
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
                 navMenu.classList.remove('active');
+                headerSns.classList.remove('active');
                 hamburger.classList.remove('active');
             });
         });
@@ -84,7 +87,7 @@ function initCountdown() {
         const timeDifference = targetDate - now;
         
         if (timeDifference <= 0) {
-            countdownElement.innerHTML = '<span class="countdown-number">0</span><span class="countdown-label">日</span>';
+            countdownElement.innerHTML = '<span class="countdown-prefix">あと</span><span class="countdown-number">0</span><span class="countdown-suffix">日</span>';
             return;
         }
         
@@ -94,8 +97,9 @@ function initCountdown() {
         const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
         
         countdownElement.innerHTML = `
+            <span class="countdown-prefix">あと</span>
             <span class="countdown-number">${days}</span>
-            <span class="countdown-label">日</span>
+            <span class="countdown-suffix">日</span>
         `;
     }
     
@@ -133,7 +137,7 @@ function initProgressBar() {
         }
         
         progressFill.style.width = currentProgress + '%';
-        progressText.textContent = `目標: ${(targetAmount / 10000).toLocaleString()}万円 / 現在: ${(currentAmount / 10000).toLocaleString()}万円 (${Math.round(currentProgress)}%)`;
+        progressText.innerHTML = `現在: ${(currentAmount / 10000).toLocaleString()}万円<br>目標: ${(targetAmount / 10000).toLocaleString()}万円<br>達成率: ${Math.round(currentProgress)}%`;
     }, stepDuration);
 }
 
@@ -327,7 +331,8 @@ function initHeadlinePosition() {
         function adjustHeadlinePosition() {
             const headerHeight = header.offsetHeight;
             const extraMargin = 10; // 追加の余白
-            headlineTicker.style.marginTop = (headerHeight + extraMargin) + 'px';
+            const marginTop = headerHeight + extraMargin;
+            headlineTicker.style.marginTop = marginTop + 'px';
         }
         
         // 初期調整
