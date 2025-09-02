@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>よくある質問 - 鹿児島県立甲南高等学校 同窓会</title>
+    <meta name="description" content="甲南高校同窓会に関するよくある質問と回答をご案内します。入会方法、支部活動、イベント参加などについて詳しく説明しています。">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* FAQ専用スタイル */
+        .faq-section {
+            background-color: var(--base-light-gray);
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .faq-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+        
+        .faq-item {
+            margin-bottom: 25px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            background-color: var(--base-white);
+            padding: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--text-dark);
+            border-bottom: 1px solid var(--border-color);
+            transition: background-color 0.3s;
+            position: relative;
+        }
+        
+        .faq-question:hover {
+            background-color: var(--accent-color);
+        }
+        
+        .faq-question::after {
+            content: '▼';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s;
+        }
+        
+        .faq-question.active::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+        
+        .faq-answer {
+            background-color: var(--base-white);
+            padding: 20px;
+            display: none;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+        
+        .faq-answer.active {
+            display: block;
+        }
+        
+        .faq-category {
+            margin-bottom: 40px;
+        }
+        
+        .faq-category h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        .search-box {
+            background-color: var(--base-light-gray);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 5px rgba(102, 0, 153, 0.2);
+        }
+        
+        .contact-link {
+            background-color: var(--primary-color);
+            color: var(--base-white);
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .contact-link:hover {
+            background-color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- 固定ヘッダー -->
+    <header class="fixed-header">
+        <div class="header-top">
+            <span>鹿児島県立甲南高等学校 同窓会  公式Webサイト</span>
+        </div>
+        <div class="header-main">
+            <div class="header-top-row">
+                <div class="emblem-group">
+                    <img src="../images/emblem.jpg" alt="鹿児島県立甲南高等学校 同窓会" class="emblem">
+                    <a href="../index.html" class="title-text">鹿児島県立甲南高等学校 同窓会</a>
+                </div>
+            </div>
+            <div class="header-bottom-row">
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="../index.html">ホーム</a></li>
+                        <li><a href="../news.html">新着情報</a></li>
+                        <li><a href="../activities.html">同窓会活動紹介</a></li>
+                        <li><a href="../organizations.html">組織紹介</a></li>
+                        <li><a href="../terms.html">各種規約</a></li>
+                        <li><a href="../contact.html">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+                <div class="header-sns">
+                    <a href="https://www.facebook.com/groups/521273894575850" target="_blank" class="sns-icon facebook">
+                        <img src="../images/logo_facebook.png" alt="Facebook">
+                    </a>
+                    <a href="https://page.line.me/478pwicv" target="_blank" class="sns-icon line">
+                        <img src="../images/logo_LINE.png" alt="LINE">
+                    </a>
+                    <a href="https://www.instagram.com/konan.k_dousoukai/" target="_blank" class="sns-icon instagram">
+                        <img src="../images/logo_Instagram.png" alt="Instagram">
+                    </a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ヘッドライン -->
+    <div class="headline-ticker">
+        <div class="ticker-container">
+            <div class="ticker-item active">
+                <span class="ticker-date">2024.12.15</span>
+                <span class="ticker-label">【重要】</span>
+                <span class="ticker-text">2024年度関東甲南同窓会総会開催のお知らせ</span>
+            </div>
+            <div class="ticker-item">
+                <span class="ticker-date">2024.12.10</span>
+                <span class="ticker-label">【甲南塾】</span>
+                <span class="ticker-text">第23回講演会実施報告</span>
+            </div>
+            <div class="ticker-item">
+                <span class="ticker-date">2024.12.05</span>
+                <span class="ticker-label">【記念事業】</span>
+                <span class="ticker-text">120周年記念事業 寄附のお願い</span>
+            </div>
+            <div class="ticker-item">
+                <span class="ticker-date">2024.12.01</span>
+                <span class="ticker-label">【出版物】</span>
+                <span class="ticker-text">甲南GUIDE 最新号発行のお知らせ</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ヒーローセクション -->
+    <section class="hero sub-hero">
+        <div class="hero-content">
+            <h2>よくある質問</h2>
+            <p>よくある質問と回答をご案内します</p>
+        </div>
+    </section>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <div class="main-area">
+                <h2 class="page-title">よくある質問</h2>
+                
+                <!-- 検索ボックス -->
+                <div class="search-box">
+                    <input type="text" id="faq-search" placeholder="質問を検索してください...">
+                </div>
+
+                <!-- 入会・会員に関する質問 -->
+                <div class="faq-category">
+                    <h2>入会・会員に関する質問</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">同窓会への入会方法を教えてください</div>
+                        <div class="faq-answer">
+                            甲南高校を卒業された方は自動的に同窓会の会員となります。入会手続きは不要です。ただし、住所変更や連絡先の更新が必要な場合は、お問い合わせフォームまたは電話でご連絡ください。
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">会費は必要ですか？</div>
+                        <div class="faq-answer">
+                            同窓会の会費はありません。ただし、支部・分会によっては独自の会費を設定している場合があります。詳細は各支部・分会にお問い合わせください。
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">住所変更の連絡方法を教えてください</div>
+                        <div class="faq-answer">
+                            住所変更は、お問い合わせフォームまたは電話（099-257-0024）でご連絡ください。甲南GUIDEの配布先も更新いたします。
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">退会はできますか？</div>
+                        <div class="faq-answer">
+                            同窓会からの退会はできません。甲南高校を卒業された方は生涯同窓会の会員となります。ただし、甲南GUIDEの配布停止などのご希望がある場合は、お問い合わせください。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 支部・分会に関する質問 -->
+                <div class="faq-category">
+                    <h2>支部・分会に関する質問</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">支部・分会への参加方法を教えてください</div>
+                        <div class="faq-answer">
+                            お住まいの地域の支部・分会に直接お問い合わせください。支部・分会の連絡先は「組織紹介」ページでご確認いただけます。参加は任意です。
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">支部・分会の活動内容を教えてください</div>
+                        <div class="faq-answer">
+                            支部・分会によって異なりますが、主に懇親会、講演会、地域貢献活動などを行っています。詳細は各支部・分会にお問い合わせください。
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">支部・分会の会費はいくらですか？</div>
+                        <div class="faq-answer">
+                            支部・分会によって会費が異なります。詳細は各支部・分会にお問い合わせください。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- イベント・活動に関する質問 -->
+                <div class="faq-category">
+                    <h2>イベント・活動に関する質問</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">同窓会のイベントに参加できますか？</div>
+                        <div class="faq-answer">
+                            はい、甲南高校を卒業された方であれば、どなたでも参加できます。イベントの詳細は「新着情報」や「同窓会活動紹介」ページでご確認いただけます。
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">甲南塾の講演会に参加できますか？</div>
+                        <div class="faq-answer">
+                            はい、甲南塾の講演会は一般公開しています。事前申し込みが必要な場合がありますので、詳細は「同窓会活動紹介」ページでご確認ください。
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">企業訪問の見学はできますか？</div>
+                        <div class="faq-answer">
+                            企業訪問は主に現役生向けの活動ですが、一部の見学会は卒業生も参加可能です。詳細はお問い合わせください。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 出版物に関する質問 -->
+                <div class="faq-category">
+                    <h2>出版物に関する質問</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">甲南GUIDEの配布について教えてください</div>
+                        <div class="faq-answer">
+                            甲南GUIDEは年2回（春・秋）発行され、会員の方には郵送でお届けしています。配布を希望されない場合は、お問い合わせください。
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">甲南GUIDEのバックナンバーは入手できますか？</div>
+                        <div class="faq-answer">
+                            バックナンバーの在庫がある場合は、お問い合わせください。ただし、古い号については在庫がない場合があります。
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">甲南GUIDEに企業情報を掲載したい</div>
+                        <div class="faq-answer">
+                            甲南GUIDEへの企業情報掲載をご希望の場合は、お問い合わせフォームまたは電話でご連絡ください。掲載料金や詳細についてご案内いたします。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 寄附・記念事業に関する質問 -->
+                <div class="faq-category">
+                    <h2>寄附・記念事業に関する質問</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">120周年記念事業への寄附方法を教えてください</div>
+                        <div class="faq-answer">
+                            寄附は銀行振込または郵便振替で受け付けています。詳細は「お問い合わせ」ページの寄附受付セクションをご確認ください。
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">寄附金の使途について教えてください</div>
+                        <div class="faq-answer">
+                            寄附金は、120周年記念事業の運営費、記念誌の制作費、記念イベントの開催費などに使用されます。詳細な使途は年度末に報告いたします。
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">寄附の領収書は発行されますか？</div>
+                        <div class="faq-answer">
+                            はい、寄附の領収書は発行いたします。税制上の優遇措置の対象となる場合があります。詳細はお問い合わせください。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- その他の質問 -->
+                <div class="faq-category">
+                    <h2>その他の質問</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">二甲記念館の利用方法を教えてください</div>
+                        <div class="faq-answer">
+                            二甲記念館は、同窓会の事務所として利用されています。見学をご希望の場合は、事前にお問い合わせください。アクセス情報は「お問い合わせ」ページでご確認いただけます。
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">同窓生の連絡先を教えてもらえますか？</div>
+                        <div class="faq-answer">
+                            個人情報保護のため、同窓生の連絡先を直接お教えすることはできません。ただし、甲南GUIDEに掲載されている企業情報については、該当企業に直接お問い合わせください。
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">母校の甲南高校との連携について教えてください</div>
+                        <div class="faq-answer">
+                            同窓会は母校との連携を大切にしています。企業訪問、講演会、進路指導など、様々な形で母校をサポートしています。詳細は「同窓会活動紹介」ページでご確認いただけます。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- お問い合わせ案内 -->
+                <div class="faq-section">
+                    <h3>お問い合わせ</h3>
+                    <p>上記の質問で解決しない場合は、お気軽にお問い合わせください。</p>
+                    <a href="contact-form.html" class="contact-link">お問い合わせフォームへ</a>
+                </div>
+            </div>
+
+            <!-- サイドバー -->
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">120周年記念式典</h3>
+                    <p style="text-align: center; font-size: 14px; color: var(--text-light);">
+                        2026年11月2日実施予定まで
+                    </p>
+                    <div class="countdown" id="countdown">
+                        <span class="countdown-prefix">あと</span>
+                        <span class="countdown-number">--</span>
+                        <span class="countdown-suffix">日</span>
+                    </div>
+                </div>
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">寄附進捗状況</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <div class="progress-text">現在: 1,800万円<br>目標: 10,000万円<br>達成率: 18%</div>
+                </div>
+                <!-- 連携サイト -->
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">連携サイト</h3>
+                    <a href="https://edunet002.synapse-blog.jp/konan/" target="_blank" class="banner">
+                        <div>
+                            <strong>甲南高校HP</strong><br>
+                            懐かしの母校
+                        </div>
+                    </a>
+                    <a href="https://konan-guide.org/" target="_blank" class="banner">
+                        <div>
+                            <strong>甲南GUIDE</strong><br>
+                            同窓生の企業情報
+                        </div>
+                    </a>
+                    <a href="https://kounan-ssf.org/" target="_blank" class="banner">
+                        <div>
+                            <strong>薩摩スチューデント基金</strong><br>
+                            現役生の海外研修支援事業
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- ホットライン -->
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">ホットライン</h3>
+                    <a href="#" class="banner">
+                        <div>
+                            <strong>住所変更連絡フォーム</strong><br>
+                            住所変更の連絡をお願いします
+                        </div>
+                    </a>
+                    <a href="#" target="_blank" class="banner">
+                        <div>
+                            <strong>寄附受付</strong><br>
+                            寄附のご協力をお願いします
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- 関連ページ -->
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">関連ページ</h3>
+                    <a href="../contact.html" class="banner">
+                        <div>
+                            <strong>お問い合わせ</strong><br>
+                            お気軽にご連絡ください
+                        </div>
+                    </a>
+                    <a href="organizations.html" class="banner">
+                        <div>
+                            <strong>組織紹介</strong><br>
+                            支部・分会の情報
+                        </div>
+                    </a>
+                    <a href="activities.html" class="banner">
+                        <div>
+                            <strong>同窓会活動紹介</strong><br>
+                            活動内容の詳細
+                        </div>
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- フッター -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p><strong>鹿児島県立甲南高等学校 同窓会</strong></p>
+                <p>〒890-0052 鹿児島市上之園町23-1</p>
+                <p>TEL/FAX: 099-257-0024</p>
+                <p>Email: zimukyoku@kounan-dousoukai.jp</p>
+            </div>
+            <div class="footer-copyright">
+                <p>Copyright &copy; Kounan High School Alumni Association All rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        // FAQのアコーディオン機能
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const isActive = this.classList.contains('active');
+                    
+                    // 他の質問を閉じる
+                    faqQuestions.forEach(q => {
+                        q.classList.remove('active');
+                        q.nextElementSibling.classList.remove('active');
+                    });
+                    
+                    // クリックされた質問を開く/閉じる
+                    if (!isActive) {
+                        this.classList.add('active');
+                        answer.classList.add('active');
+                    }
+                });
+            });
+            
+            // 検索機能
+            const searchInput = document.getElementById('faq-search');
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                faqItems.forEach(item => {
+                    const question = item.querySelector('.faq-question').textContent.toLowerCase();
+                    const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+                    
+                    if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
