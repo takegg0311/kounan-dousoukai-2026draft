@@ -18,6 +18,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // ヘッドライン位置調整
     initHeadlinePosition();
+    
+    // Cookieポリシー
+    initCookieNotice();
 });
 
 // ハンバーガーメニュー機能
@@ -355,4 +358,44 @@ document.addEventListener('DOMContentLoaded', function() {
     initBackToTop();
     initAccessibility();
     initPerformanceOptimizations();
-}); 
+});
+
+// Cookieポリシー機能
+function initCookieNotice() {
+    const cookieNotice = document.getElementById('cookie-notice');
+    if (!cookieNotice) return;
+    
+    // Cookieの同意状態をチェック
+    const cookieConsent = localStorage.getItem('cookieConsent');
+    
+    if (cookieConsent === null) {
+        // 初回訪問の場合、Cookieポリシーを表示
+        setTimeout(() => {
+            cookieNotice.classList.add('show');
+        }, 1000); // 1秒後に表示
+    }
+    
+    // 同意ボタンの処理
+    const acceptButton = document.getElementById('cookie-accept');
+    if (acceptButton) {
+        acceptButton.addEventListener('click', function() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            cookieNotice.classList.add('hide');
+            setTimeout(() => {
+                cookieNotice.style.display = 'none';
+            }, 300);
+        });
+    }
+    
+    // 拒否ボタンの処理
+    const declineButton = document.getElementById('cookie-decline');
+    if (declineButton) {
+        declineButton.addEventListener('click', function() {
+            localStorage.setItem('cookieConsent', 'declined');
+            cookieNotice.classList.add('hide');
+            setTimeout(() => {
+                cookieNotice.style.display = 'none';
+            }, 300);
+        });
+    }
+} 
