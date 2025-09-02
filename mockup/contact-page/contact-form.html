@@ -3,8 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>薩摩スチューデント基金 - 鹿児島県立甲南高等学校 同窓会</title>
+    <title>お問い合わせフォーム - 鹿児島県立甲南高等学校 同窓会</title>
+    <meta name="description" content="甲南高校同窓会のお問い合わせフォームです。お気軽にご連絡ください。">
     <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* フォーム専用スタイル */
+        .contact-form {
+            background-color: var(--base-light-gray);
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: var(--text-dark);
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: inherit;
+        }
+        
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 5px rgba(102, 0, 153, 0.2);
+        }
+        
+        .form-group.error input,
+        .form-group.error textarea,
+        .form-group.error select {
+            border-color: #ff0000;
+        }
+        
+        .submit-button {
+            background-color: var(--primary-color);
+            color: var(--base-white);
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-button:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .back-link::before {
+            content: '← ';
+        }
+    </style>
 </head>
 <body>
     <!-- 固定ヘッダー -->
@@ -79,108 +162,86 @@
     <!-- ヒーローセクション -->
     <section class="hero sub-hero">
         <div class="hero-content">
-            <h2>薩摩スチューデント基金</h2>
-            <p>海外派遣による国際的人材の育成を目指す公益財団法人</p>
+            <h2>お問い合わせフォーム</h2>
+            <p>お気軽にご連絡ください</p>
         </div>
     </section>
 
     <!-- メインコンテンツ -->
     <main class="main-content">
         <div class="content-wrapper">
-            <div class="main-section">
-                <!-- 見出し -->
-                <section class="caption-section">
-                    <div class="caption">
-                        <article class="caption-item">
-                            <div class="caption-content">
-                                <h3 class="caption-title">公益財団法人甲南高校薩摩スチューデント基金からのお知らせ</h3>
-                                <p class="caption-excerpt">甲南高校薩摩スチューデント基金は、創立110周年記念の主要事業としてスタートし、これまで多くの在校生を海外に派遣し、鹿児島をはじめ世界を担う次世代の人材を母校から輩出していくことを目的に取組む公益財団法人です。2025年4月1日より一般財団法人から公益財団法人に移行し、寄附金控除の対象となりました。</p>
-                            </div>
-                        </article>
-                    </div>
-                </section>
-
-                <!-- 新着情報 -->
-                <section class="news-section">
-                    <h3>新着情報</h3>
-                    <div class="news-list">
-                        <article class="news-item">
-                            <div class="news-content">
-                                <div class="news-meta">
-                                    <span class="news-date">2025.04.01</span>
-                                    <span class="news-category">【重要】</span>
-                                    <span class="news-title">公益財団法人への移行完了</span>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="news-item">
-                            <div class="news-content">
-                                <div class="news-meta">
-                                    <span class="news-date">2025.03.15</span>
-                                    <span class="news-category">【海外派遣】</span>
-                                    <span class="news-title">2024年度海外派遣生報告会開催</span>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="news-item">
-                            <div class="news-content">
-                                <div class="news-meta">
-                                    <span class="news-date">2025.02.20</span>
-                                    <span class="news-category">【寄附】</span>
-                                    <span class="news-title">寄附金控除対象事業として認定</span>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </section>
-
-                <!-- 薩摩スチューデント詳細 -->
-                <section class="contact-info">
-                    <h3>薩摩スチューデント基金詳細</h3>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <h4>財団概要</h4>
-                            <p><strong>名称：</strong>公益財団法人甲南高校薩摩スチューデント基金</p>
-                            <p><strong>所在地：</strong>鹿児島県鹿児島市上之園町23番地1</p>
-                            <p><strong>設立：</strong>平成28年4月1日</p>
-                            <p><strong>公益認定移行日：</strong>令和7年4月1日</p>
+            <div class="main-area">
+                
+                <h2 class="page-title">お問い合わせフォーム</h2>
+                
+                <!-- お問い合わせフォーム -->
+                <section class="contact-form">
+                    <h3 style="color: var(--primary-color); margin-bottom: 20px;">お問い合わせフォーム</h3>
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">お名前 <span style="color: #ff0000;">*</span></label>
+                            <input type="text" id="name" name="name" required>
                         </div>
-                        <div class="contact-item">
-                            <h4>目的</h4>
-                            <p>当財団は、鹿児島県立甲南高等学校の生徒に対して海外派遣の費用を助成し、世界で活躍する有為な人材の育成及びその見聞で得た知識、経験を広く一般に情報発信することにより、児童及び青少年の健全な育成に寄与することを目的としております。</p>
+                        
+                        <div class="form-group">
+                            <label for="email">メールアドレス <span style="color: #ff0000;">*</span></label>
+                            <input type="email" id="email" name="email" required>
                         </div>
-                        <div class="contact-item">
-                            <h4>事務局</h4>
-                            <p><strong>所在地：</strong>鹿児島県鹿児島市上之園町23番地1 甲南高校内</p>
-                            <p><strong>TEL/FAX：</strong>099-257-0024</p>
-                            <p><strong>MAIL：</strong>info@kounan-ssf.org</p>
+                        
+                        <div class="form-group">
+                            <label for="phone">電話番号</label>
+                            <input type="tel" id="phone" name="phone">
                         </div>
-                        <div class="contact-item">
-                            <h4>寄附について</h4>
-                            <p><strong>寄附方法：</strong>毎月、毎年等継続的なご支援も可能です</p>
-                            <p><strong>税制優遇：</strong>寄附金控除の対象となります</p>
-                            <p><strong>寄附の使途：</strong>海外派遣費用の助成、運営費</p>
-                            <p><strong>財団の特徴：</strong>同窓生のご支援で成り立っております</p>
+                        
+                        <div class="form-group">
+                            <label for="graduation_year">卒業年</label>
+                            <select id="graduation_year" name="graduation_year">
+                                <option value="">選択してください</option>
+                                <option value="2024">2024年</option>
+                                <option value="2023">2023年</option>
+                                <option value="2022">2022年</option>
+                                <option value="2021">2021年</option>
+                                <option value="2020">2020年</option>
+                                <option value="2019">2019年</option>
+                                <option value="2018">2018年</option>
+                                <option value="2017">2017年</option>
+                                <option value="2016">2016年</option>
+                                <option value="2015">2015年</option>
+                                <option value="before_2015">2015年以前</option>
+                                <option value="not_graduate">卒業生ではありません</option>
+                            </select>
                         </div>
-                    </div>
+                        
+                        <div class="form-group">
+                            <label for="category">お問い合わせ種別 <span style="color: #ff0000;">*</span></label>
+                            <select id="category" name="category" required>
+                                <option value="">選択してください</option>
+                                <option value="general">一般のお問い合わせ</option>
+                                <option value="membership">会員に関するお問い合わせ</option>
+                                <option value="event">イベントに関するお問い合わせ</option>
+                                <option value="donation">寄附に関するお問い合わせ</option>
+                                <option value="publication">出版物に関するお問い合わせ</option>
+                                <option value="other">その他</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">件名 <span style="color: #ff0000;">*</span></label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">お問い合わせ内容 <span style="color: #ff0000;">*</span></label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-button">送信する</button>
+                    </form>
                 </section>
             </div>
 
             <!-- サイドバー -->
             <aside class="sidebar">
-                <div class="sidebar-section">
-                    <h3 class="sidebar-title">同窓会活動紹介</h3>
-                    <ul class="sidebar-list">
-                        <li><a href="./history.html">沿革</a></li>
-                        <li><a href="./kounan-jyuku.html">甲南塾</a></li>
-                        <li><a href="./corp-visit.html">企業訪問</a></li>
-                        <li><a href="./newsletter.html">蔦のある窓</a></li>
-                        <li><a href="./satsuma-student.html">薩摩スチューデント基金</a></li>
-                        <li><a href="./kounan-guide.html">甲南GUIDE</a></li>
-                        <li><a href="./120th-anniversary.html">120周年記念事業</a></li>
-                    </ul>
-
-                </div>
                 <div class="sidebar-section">
                     <h3 class="sidebar-title">120周年記念式典</h3>
                     <p style="text-align: center; font-size: 14px; color: var(--text-light);">
@@ -199,6 +260,7 @@
                     </div>
                     <div class="progress-text">現在: 1,800万円<br>目標: 10,000万円<br>達成率: 18%</div>
                 </div>
+                <!-- 連携サイト -->
                 <div class="sidebar-section">
                     <h3 class="sidebar-title">連携サイト</h3>
                     <a href="https://edunet002.synapse-blog.jp/konan/" target="_blank" class="banner">
@@ -220,6 +282,8 @@
                         </div>
                     </a>
                 </div>
+                
+                <!-- ホットライン -->
                 <div class="sidebar-section">
                     <h3 class="sidebar-title">ホットライン</h3>
                     <a href="#" class="banner">
@@ -232,6 +296,23 @@
                         <div>
                             <strong>寄附受付</strong><br>
                             寄附のご協力をお願いします
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- 関連ページ -->
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">関連ページ</h3>
+                    <a href="../contact.html" class="banner">
+                        <div>
+                            <strong>お問い合わせ</strong><br>
+                            お問い合わせページに戻る
+                        </div>
+                    </a>
+                    <a href="faq.html" class="banner">
+                        <div>
+                            <strong>よくある質問</strong><br>
+                            よくある質問と回答
                         </div>
                     </a>
                 </div>
@@ -254,9 +335,6 @@
         </div>
     </footer>
 
-    <!-- トップに戻るボタン -->
-    <button id="back-to-top" class="back-to-top" aria-label="トップに戻る">↑</button>
-
     <script src="../script.js"></script>
 </body>
-</html> 
+</html>
